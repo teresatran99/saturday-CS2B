@@ -51,44 +51,57 @@ def check_cave(cave_chosen):
             print("You got hit by the fart!")
 
 
-            
-        print('''Now you must walk across a bridge to reach the second
+    
+    print('''Now you must walk across a bridge to reach the second
     checkpoint. You will meet the headmasters of the dragonrealm. One will
     give you a few riddles and the other will test your luck.''')
-        time.sleep(3)
-        print("You walk across the bridge and realize how unstable it's been constructed-")
-        time.sleep(2)
-        print('''Run! The board under your feet starts to break and
+    time.sleep(3)
+    print("You walk across the bridge and realize how unstable it's been constructed-")
+    time.sleep(2)
+    print('''Run! The board under your feet starts to break and
               it won't be able to hold you up much longer.''')
-        time.sleep(2)
-        print('''You reach the end of the bridge and see two old men dressed in bizarre
+    time.sleep(2)
+    print('''You reach the end of the bridge and see two old men dressed in bizarre
               wizard-like outfits''')
-        print("The man on the right introduces himself.")
-        time.sleep(2)
-        print('''"Hello! I am a headmaster of this realm. If you want to get pass me,
+    print("The man on the right introduces himself.")
+    time.sleep(2)
+    print('''"Hello! I am a headmaster of this realm. If you want to get pass me,
                 you have to answer at least one riddle correctly..."''')
-        print("Over fire and over stone,")
-        print("Over water and over bone,")
-        print("Shining out like jewels of light,")
-        print("On a sheet of purest night.")
-        print("What are we?")
-    correct_answer = random.randint(1, 2)
+    time.sleep(3)
+    print("Over fire and over stone,")
+    time.sleep(3)
+    print("Over water and over bone,")
+    time.sleep(3)
+    print("Shining out like jewels of light,")
+    time.sleep(3)
+    print("On a sheet of purest night.")
+    time.sleep(3)
+    print("What are we?")
+    print()
+
+    
     correct_answer = input()
+        
     if correct_answer == "stars" and correct_answer == "stars" :
         print("congrats! you shall pass")
     else:
         print("Incorrect! Here's another riddle:")
+        time.sleep(3)
         print("I can fly yet have no wings,")
         print("I beat down mountains, I conquer kings,")
         print("At once three different things am I,")
         print("As a continuous whole, I cannot die.")
         print("Do you know who I am?")
         print("HINT: it's not a physical object")
+        print()
+        correct_answer = input()
     if correct_answer == "time" and correct_answer == "time" :
         print("congrats! you shall pass and receive the treasure,")
-    else:
+        if score <= 1:
+            score += 1
         print("Aw, wrong answer. You shall pass without receiving the treasure")
-  
+        if score <= 5:
+                score -= 5
 def play():
     stillPlaying = True
     while stillPlaying:
